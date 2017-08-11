@@ -34,9 +34,14 @@ class App extends Component {
         <div className="title">
           React 制作选项卡
         </div>
-        <ul>
-          {tabs}
-        </ul>
+        <div className="tabs">
+          <ul>
+            {tabs}
+          </ul>
+          <div style={{ 'transform' : `translateX(${100*activeIndex}%)` }}
+            className="underline">
+          </div>
+        </div>
       </div>
     )
     let content = contents.map((item, i) => {

@@ -28,6 +28,20 @@ li {
   text-align: center;
 }
 
+.header .tabs {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header .underline {
+  width: 50%;
+  height: 4px;
+  background-color: #ffeb3b;
+  transition: transform .5s ease-out;
+}
+
 .header ul {
   display: flex;
 }
