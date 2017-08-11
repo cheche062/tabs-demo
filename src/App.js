@@ -17,18 +17,26 @@ class App extends Component {
   }
 
   render() {
+
+    let { activeIndex } = this.state
     const contents = [
       <FirstTabContent key={111} />,
       <SecondTabContent key={222} />
     ]
 
     let tabs = contents.map((items, i) => (
-      <li key={i} onClick={() => this.handleClick(i)}>卡片{i}</li>
+      <li key={i} style={{ 'opacity' : activeIndex === i ? '1' : '0.6' }}
+        onClick={() => this.handleClick(i)}>卡片{i}</li>
     ))
 
     let header = (
       <div className="header">
-        {tabs}
+        <div className="title">
+          React 制作选项卡
+        </div>
+        <ul>
+          {tabs}
+        </ul>
       </div>
     )
     let content = contents.map((item, i) => {
